@@ -72,18 +72,18 @@ with open(f"./posterior_std_dev_synth_{synth_method_to_plot}_top_{n_candidates}_
 # Plot the 2D/3D acquisition function
 Plot = pl.Plotter(GP=GP, Grid=Grid)
 
-Plot.plot_2d_acquisition_function(
-    synth_method=synth_method_to_plot,
-    acq_max=1.1,
-    n_levels=32,
-    temperature_list=temps_to_plot_2d,
-    mode='custom', #'boundary',
-    custom_range=(0.0, 6.0, 0.0, 0.05),  # Custom range for contour plot
-    contour_resolution=50,
-    plot_allowed_grid=True,
-    plot_train=True,
-    show=False
-)
+# Plot.plot_2d_acquisition_function(
+#     synth_method=synth_method_to_plot,
+#     acq_max=1.1,
+#     n_levels=32,
+#     temperature_list=temps_to_plot_2d,
+#     mode='custom', #'boundary',
+#     custom_range=(0.0, 6.0, 0.0, 0.05),  # Custom range for contour plot
+#     contour_resolution=50,
+#     plot_allowed_grid=True,
+#     plot_train=True,
+#     show=False
+# )
 
 Plot.plot_3d_acquisition_function(
     synth_method=synth_method_to_plot,
