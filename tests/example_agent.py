@@ -27,7 +27,7 @@ parser.add_argument("--step-total-mass", help="step size for Rh total mass (mg)"
 
 parser.add_argument("--n-candidates", help="number of candidates to suggest for most informative experimental conditions with the largest uncertainity", type=int, default=5)
 parser.add_argument("--synth-method", help="synthesis method for which most informative experimental conditions are desired", type=str, default='NP')
-    # NP: Nanoprecipitation
+    # NP: colloidal nanoparticle synthesis
     # WI: Wet Impregnation
 
 args = parser.parse_args()
