@@ -29,7 +29,7 @@ conda activate catdegus
   pip install -r requirements.txt
   ```
 
-### 3. Run the example code
+### 3. Run example codes
 * Example python codes (`example.py`,`example.ipynb`) to use CatDegUS are in [`tests/`](https://github.com/dongjae-shin/CatDegUS/blob/main/tests/) directory.
 * In the `tests/`, run as follows:
   ``` bash
@@ -51,6 +51,8 @@ conda activate catdegus
                             x_range_max=[550, 1.0, 0.02, 1])
   GP.train_gp()
   ```
+* `example.ipynb` (or `example.py`): sequential uncertainty sampling for catalyst testing and the visualization of uncertainty.
+* `example_HT_reactor`: batch uncertainty sampling for **high-throughput (HT) reactor** with specific 4×4 reactor architecture.
 
 ## Requirements
 * Required modules: `pandas`, `torch`, `botorch`, `matplotlib`, `openpyxl`
@@ -73,11 +75,15 @@ conda activate catdegus
 
 
 ## Output from the code
+#### `Uncertainty Sampling`
 * **Maximizer condition** for posterior standard deviation: US-guided experimental condition
   <div align="center">
     <img src="./imgs/maximizer.png" alt="img" width="500">
   </div>
 * Maximizer condition for other supported acquisition functions
+* **Joint maximizer** condition for posterior standard deviation for q-batch sampling
+* Selection of **temperatures with uncertainties** averaged over the other features for specific HT reactor
+#### `Visualization`
 * **2D visualization** of a selected acquisition function for a selected synthesis method and temperature
   <div align="center">
     <img src="./imgs/2d_plot.png" alt="img" width="500">
@@ -86,6 +92,7 @@ conda activate catdegus
   <div align="center">
     <img src="./imgs/3d_plot.png" alt="img" width="500">
   </div>
+#### `Potential Integration with Other Models`
 * **JSON output file** corresponding to 2D/3D plot above is generated upon visualization, which could be used for applications including LLM-agent.
 
 ## To do
