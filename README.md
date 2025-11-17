@@ -96,7 +96,9 @@ conda activate catdegus
   </div>
 #### `Potential Integration with Other Models`
 * **JSON output file** corresponding to 2D/3D plot above is generated upon visualization, which could be used for applications including LLM-agent.
-
+  <div align="center">
+    <img src="./imgs/copilot_img.png" alt="img" width="500">
+  </div>
 ## Related Publication
 * Integration into a LLM-based multi-agent system ([`link`](https://sc25.conference-program.com/presentation/?id=ws_fgai105&sess=sess209))
 
